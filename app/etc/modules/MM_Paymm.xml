@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MM PayMm 
+ * 
+ * @category     
+ * @package      MM_PayMm 
+ * @copyright    Copyright (c) 2015 MM (http://blog.meumagento.com.br/)
+ * @author       MM (Thiago Caldeira de Lima)  
+ * @version      Release: 0.1.0
+ */
+-->
+<config>
+    <modules>
+        <MM_Paymm>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Payment />
+            </depends>
+        </MM_Paymm>
+    </modules>
+</config>

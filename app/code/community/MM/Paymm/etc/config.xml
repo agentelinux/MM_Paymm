@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MM Paymm 
+ *
+ *
+ * @category     MM
+ * @package      MM_Paymm 
+ * @copyright    Copyright (c) 2015 MM (http://blog.meumagento.com.br/)
+ * @author       MM (Thiago Caldeira de Lima)  
+ * @version      Release: 0.1.0
+ */
+-->
+<config>
+    <modules>
+        <MM_Paymm>
+            <version>0.1.0</version>
+        </MM_Paymm>
+    </modules>
+    <global>
+        <models>
+            <paymm>
+                <class>MM_Paymm_Model</class>
+            </paymm>
+        </models>
+        <blocks>
+            <paymm>
+                <class>MM_Paymm_Block</class>
+            </paymm>
+        </blocks>
+        <helpers>
+            <paymm>
+                <class>MM_Paymm_Helper</class>
+            </paymm>
+        </helpers>
+    </global>
+    <default>
+        <payment>
+            <paymm_creditcard>
+                <active>0</active>
+                <model>paymm/creditcard</model>
+                <order_status>pending</order_status>
+                <title>Pay MM</title> 
+                <cctypes>AE,VI,MC,DI</cctypes>
+                <payment_action>authorize</payment_action>
+                <allowspecific>0</allowspecific>
+            </paymm_creditcard>
+        </payment>
+    </default>
+</config>

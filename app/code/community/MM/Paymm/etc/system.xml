@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MM Ajax 
+ *
+ *
+ * @category     MM
+ * @package      MM_Paymm 
+ * @copyright    Copyright (c) 2015 MM (http://blog.meumagento.com.br/)
+ * @author       MM (Thiago Caldeira de Lima)  
+ * @version      Release: 0.1.0
+ */
+-->
+<config>
+    <tabs>
+        <paymm translate="label" module="paymm">
+            <label>MM Paymm</label>
+            <sort_order>800</sort_order>
+        </paymm>
+    </tabs>
+    <sections>
+        <payment translate="label" module="payment">
+            <groups>
+                <paymm translate="label">
+                    <label>MM Paymm</label>
+                    <sort_order>670</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <enable_paymm_creditcard translate="label">
+                            <label>Enable MM Credit Card</label>
+                            <frontend_type>select</frontend_type>
+                            <config_path>payment/paymm_creditcard/active</config_path>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </enable_paymm_creditcard>
+                        <paymm_creditcard_order_status translate="label">
+                            <label>New Order Status</label>
+                            <frontend_type>select</frontend_type>
+                            <config_path>payment/paymm_creditcard/order_status</config_path>
+                            <source_model>adminhtml/system_config_source_order_status_new</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </paymm_creditcard_order_status>  
+                        <cctypes translate="label">
+                            <label>Credit Card Types</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <config_path>payment/paymm_creditcard/cctypes</config_path>
+                            <source_model>paymm/source_cctypes</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </cctypes>
+                    </fields>
+                </paymm>
+            </groups>
+        </payment>
+    </sections>
+</config>
