@@ -36,15 +36,14 @@
     </global>
     <default>
         <payment>
-            <paymm_creditcard>
+            <paymm_paymm>
                 <active>0</active>
-                <model>paymm/creditcard</model>
+                <model>paymm/paymm</model>
                 <order_status>pending</order_status>
                 <title>Pay MM</title> 
-                <cctypes>AE,VI,MC,DI</cctypes>
                 <payment_action>authorize</payment_action>
                 <allowspecific>0</allowspecific>
-            </paymm_creditcard>
+            </paymm_paymm>
         </payment>
     </default>
 </config>

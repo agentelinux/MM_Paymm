@@ -1,0 +1,23 @@
+<?php
+/**
+ * MM Paymm 
+ * 
+ * @category     MM
+ * @package      MM_Paymm 
+ * @copyright    Copyright (c) 2015 MM (http://blog.meumagento.com.br/)
+ * @author       MM (Thiago Caldeira de Lima)  
+ * @version      Release: 0.1.0
+ */
+
+$_code=$this->getMethodCode(); 
+?>
+<ul class="form-list" id="payment_form_<?php echo $_code ?>" style="display:none;">    
+    <li>
+        <label for="<?php echo $_code ?>_cc_cid" class="required"><em>*</em><?php echo $this->__('Expiration Day') ?></label>
+        <select name="payment[expirationDay]">
+        <?php foreach ($this->getExpirationDays() as $day): ?>
+            <option value="<?php echo $day;?>"><?php echo $day;?></option>
+        <?php endforeach ?>
+        </select>
+    </li>
+</ul>
